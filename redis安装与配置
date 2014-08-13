@@ -1,1 +1,84 @@
-redis 下载
+一、删除(不建议使用)！！！！！
+如果以前安装的有Redis 再想自己练习的话可以进行这一步，
+A、删除gcc  描述：查看是否安装+删除程序（gcc-*要慎用，否则后果不能预料的惨）
+1、查看是否安装
+命令：yum list all |grep gcc*
+2、删除程序
+命令：yum remove gcc -y 
+结果：
+ 
+B、删除redis 描述：关闭redis-server进程+删除文件夹
+1.找出进程号：
+命令：ps -ef|grep redis
+结果：
+ 
+2.删除文件：建议手动删除。
+二、安装编译器
+A、安装gcc程序：因为redis是C程序写的，必须要有一个编译器来编译，
+例如gcc，否则将出现you意想不到的错误。
+描述：安装gcc软件
+方法一：yum 安装Linux下的软件有很多可以用yum安装
+tips：yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。
+基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，
+无须繁琐地一次次下载、安装。yum提供了查找、安装、删除某一个、一组甚至全部软件包的命令，而且命令简洁而又好记
+自动搜索最快镜像插件：   yum install yum-fastestmirror
+安装yum图形窗口插件：  yum install yumex
+查看可能批量安装的列表： yum grouplist
+具体请参见：
+http://www.cnblogs.com/chuncn/archive/2010/10/17/1853915.html
+命令：  yum -y install gcc  gcc-c++
+结果：因为我刚才执行了yum –y install gcc-*导致一些不必要的东西得下载。
+ 
+方法二、看看强哥文档。此处略。
+
+三、安装redis
+A、下载redis安装包（版本自定）
+网址：redis下载地址：http://download.redis.io/releases/redis-2.8.13.tar.gz
+原文链接：http://www.linuxidc.com/Linux/2014-07/104166.htm
+如果在安装redis的时候有错误请参见：
+http://www.cnblogs.com/super-d2/p/3819385.html
+B、安装redis
+可以放在usr/local下：
+解压命令：tar xzf redis-2.8.12.tar.gz
+进入redis：cd redis-2.8.12.tar.gz
+编译     ：  make 
+部分结果：
+ 
+
+make命令执行完成后，会在当前目录下生成本个可执行文件，分别是redis-server、redis-cli、redis-benchmark、redis-stat
+，它们的作用如下：参见
+http://jingyan.baidu.com/article/597035521a7ceb8fc00740c5.html
+命令：make install
+make install，这条命令来进行安装（当然有些软件需要先运行 make check 或 make test 来进行一些测试），
+这一步一般需要你有 root 权限（因为要向系统写入文件）。
+参见：http://blog.sina.com.cn/s/blog_6a2236590101945u.html
+结果：
+ 
+
+命令：src/redis-server
+结果：
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
