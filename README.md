@@ -1,4 +1,4 @@
-redis-tomcat-nginx-
+redis-tomcat-nginx
 ===================
 
 redis配置 tomcat 配置 nginx 配置 三者配合
@@ -7,4 +7,4 @@ redis配置 tomcat 配置 nginx 配置 三者配合
    安装nginx。并且配置
 2、实现session共享
    安装redis 配置
-3、重要的是自己先安装，然后写出文档，然后再继续测试
+3、重要的是自己先安装然后再继续测试，然后写出文档，
