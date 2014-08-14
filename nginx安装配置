@@ -24,7 +24,7 @@ NGINX安装与配置
 
 1.安装需要root权限
 2.安装gcc： yum –y install gcc
-3.安装pcre/pcre-devel/zlib/zlib-devel：ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ 
+3.安装gcc-c++/pcre/pcre-devel/zlib/zlib-devel五个文件：ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ 
 yum -y install zlib zlib-devel openssl openssl--devel pcre pcre-devel
 下载tar包，也可以用yum安装，
 tar -xf pcre-8.33.tar.gz
