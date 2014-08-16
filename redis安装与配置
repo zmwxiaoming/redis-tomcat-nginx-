@@ -50,6 +50,18 @@ B、安装redis
 编译     ：  make 
 部分结果：
 ============================================================================================================
+可能出现的问题 
+error: jemalloc/jemalloc.h: No such file or directory
+zmalloc.h:55:2: error: 
+#error "Newer version of jemalloc required"
+make[1]: *** [adlist.o] Error 1
+make[1]: Leaving directory `/data0/src/redis-2.6.2/src'
+make: *** [all] 
+Error 2
+----------
+解决办法是：
+make MALLOC=libc
+============================================================================================================
 TIPS：
 make命令执行完成后，会在当前目录下生成本个可执行文件，分别是redis-server、redis-cli、redis-benchmark、redis-stat
 ，它们的作用如下：参见
